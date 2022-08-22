@@ -6,6 +6,7 @@
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +18,19 @@
 <body>
     <h1>PHP BADWORDS</h1>
     <p>
-    
         <?php
             // Stampo a schermo il paragrafo e la sua lunghezza.
             echo $paragraphText;
-            echo strlen($paragraphText);
         ?>
     </p>
+    <h5>
+        Lunghezza testo: 
+        <?php 
+             echo strlen($paragraphText);
+        ?>
+    </h5>
+
+
     <h5>Parola ricercata: 
         <?php 
         // Stampo a schermo la parola ricercata
@@ -32,12 +39,17 @@
     </h5>
     <p>
         <?php 
-        // Sostituisco con *** la parola da censurare 
-        $wordCensored = str_replace($userWord, '***', $paragraphText);
-        // Stampo a schermo il nuovo paragrafo con la parola censurata e la lunghezza
-        echo $wordCensored;
-        echo strlen($wordCensored);
+            // Sostituisco con *** la parola da censurare 
+            $wordCensored = str_replace($userWord, '***', $paragraphText);
+            // Stampo a schermo il nuovo paragrafo con la parola censurata e la lunghezza
+            echo $wordCensored;
         ?>
     </p>
+    <h5>
+        Lunghezza testo: 
+        <?php 
+             echo strlen($wordCensored);
+        ?>
+    </h5>
 </body>
 </html>
